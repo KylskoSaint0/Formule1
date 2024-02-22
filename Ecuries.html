@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Ecuries</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="sidebar.css">
+   </head>
+   <body>
+    <header>
+        <img src="f1_logo.svg" alt="Formule 1">
+        <div class="sidebar" id="mySidebar" style="margin-top: 60px; margin-left: 0px;">
+            <a href="F1.html">Accueil</a>
+            <a href="Ecuries.html">Ecuries</a>
+            <a href="Pilotes.html">Pilotes</a>
+            <a href="Grand Prix.html">Grands Prix</a>
+            <a href="#">L'innovation technologique</a>
+        </div>
+        <button class="menu-button" onclick="toggleSidebar()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button> 
+    </header>
+
+    <section id="categorie1" class="content">
+        <h2>Formule 1</h2>
+        <p>Description</p>
+    </section>
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("mySidebar");
+            var content = document.querySelector(".content");
+            var menuButton = document.querySelector(".menu-button");
+
+            if (sidebar.style.left === "0px") {
+                sidebar.style.left = "-250px";
+                content.style.marginLeft = "0";
+                menuButton.classList.remove("open");
+            } else {
+                sidebar.style.left = "0px";
+                content.style.marginLeft = "250px";
+                menuButton.classList.add("open");
+            }
+        }
+    </script>
+</body>
+</html>

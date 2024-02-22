@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Formule 1</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="sidebar.css">
+   </head>
+   <body background="https://www.astonmartin.com/-/media/brand-stories/amf1-wrap-up-brand-story/desktop/f1-wrap-up---hero_desktopv3.jpg?mw=1920&rev=-1&hash=89A32CAE16C13248B03EFE3AA428E319" >
+    
+    <header>
+        <img src="f1_logo.svg" alt="Formule 1">
+          
+        <div class="sidebar" id="mySidebar">
+            <button class="menu-button" onclick="toggleSidebar()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button> 
+            <div class="categories">
+                <p><a href="#">Accueil</a></p>
+                <hr>
+                <p><a href="#">Catégorie 1</a></p>
+                <hr>
+                <p><a href="#">Catégorie 2</a></p>
+                <hr>
+                <p><a href="#">Catégorie 3</a></p>
+                <hr>
+            </div>
+        </div>
+    </header>
+  
+    <section id="categorie1" class="content">
+      <h2>Formule 1</h2>
+      <p>Description</p>
+    </section>
+
+    <script>
+        function toggleSidebar() {
+            var sidebar = document.getElementById("mySidebar");
+            var content = document.querySelector(".content");
+            var menuButton = document.querySelector(".menu-button");
+
+            if (sidebar.style.left === "0px") {
+                sidebar.style.left = "-250px";
+                content.style.marginLeft = "0";
+                menuButton.classList.remove("open");
+            } else {
+                sidebar.style.left = "0px";
+                content.style.marginLeft = "250px";
+                menuButton.classList.add("open");
+            }
+        }
+    </script>
+  </body>
+</html>
